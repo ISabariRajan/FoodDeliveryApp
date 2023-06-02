@@ -6,10 +6,11 @@ export const HeaderText = ({
     textVal
 }) => {
     return (
-            <View
+        <View
             style={{
                 backgroundColor: COLORS.grey5,
-                marginVertical: 10
+                marginVertical: 10,
+                paddingHorizontal: 10
             }}
         >
             <Text

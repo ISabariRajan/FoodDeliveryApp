@@ -160,12 +160,30 @@ export default function Homescreen({navigation}){
                         indexTest: useState(false)
                     }}
                 />
-                <View>
-                    <HeaderText
-                        textVal={"Promotions Available"}
-                    />
-                </View>
-                <Text>{"DUMMY"}</Text>
+                {/* Free Delivery -> Carousel with Business Cards */}
+                <HorizontalScorabbleList
+                    title={"Promotions available"}
+                    showScroll={false}
+                    data={hotels}
+                    CardType={BussinessCard1}
+                    passItem={true}
+                    CardParams={{
+                        cardHeight: 55,
+                        indexTest: useState(false)
+                    }}
+                />
+                {/* Free Delivery -> Carousel with Business Cards */}
+                <HorizontalScorabbleList
+                    title={"Restaurants in your area"}
+                    showScroll={false}
+                    data={hotels}
+                    CardType={BussinessCard1}
+                    passItem={true}
+                    CardParams={{
+                        cardHeight: 55,
+                        indexTest: useState(false)
+                    }}
+                />
             </ScrollView>
         </View>
    )
