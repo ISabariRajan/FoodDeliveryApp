@@ -1,0 +1,9 @@
+- Install 
+ npm install -g react-native-cli     
+ npm install --local react-native-elements    
+ npm install --local react-native-vector-icons  
+ npm install @react-native/assets  
+ npm install react-native-animatable --save   
+  npm install --local react-native-safe-area-context    
+npm install @react-navigation/native react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view @react-navigation/stack @react-navigation/bottom-tabs
+npm install @react-navigation/native react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view @react-native-navigation/stack @react-navigation/bottom-tabs
