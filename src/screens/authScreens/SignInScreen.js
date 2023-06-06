@@ -10,7 +10,7 @@ import {
 import * as Animatable from "react-native-animatable";
 import Header from "components/Header";
 import {COLORS, parameters, title, customStyle} from "global/styles";
-import {CustomButton} from "components";
+import {CustomButton} from "assets/custom_components";
 import {usercontroller} from "controllers";
 import { SocialIcon, Button } from "react-native-elements";
 import { Icon } from "@rneui/themed";
@@ -108,7 +108,7 @@ export default function SignInScreen({
                 buttonStyle={customStyle.styledButton}
                 titleStyle={customStyle.buttonTitle}
                 onPress={()=>{
-                    navigation.navigate("HomeScreen")
+                    navigation.navigate("RootClientTabs")
                     // username_val = username.current.value;
                     // password_val = password.current.value;
                     // console.log(username_val, password_val)

@@ -17,12 +17,14 @@ import {
     Pressable
 } from "react-native";
 import HomeHeader from "components/HomeHeader";
-import { CustomButton, InversibleButton, HeaderText, SquareCards } from "components";
 import { Icon } from "@rneui/themed";
 import { categories } from "data/food_categories";
-import { color } from "@rneui/base";
 import { hotels } from "data/hotel_data";
-import { BussinessCard1, HorizontalScorabbleList, SquareIconWithText, setItemId } from "components/Cards";
+import {
+    BussinessCard1, HorizontalScorabbleList,
+    HorizontalScorabbleListWithHeader, HorizontalScorabbleListWithHeaderAndCounter1,
+    SquareImgWithText, setItemId, InversibleButton
+} from "assets/custom_components";
 import { Image } from "react-native-elements";
 // import { FlatList } from "react-native-gesture-handler";
 // import 
@@ -134,22 +136,21 @@ export default function Homescreen({navigation}){
                     </View>
                 </View>
                 {/* Categories -> Carousel with Mini Cards */}
-                <HorizontalScorabbleList
+                <HorizontalScorabbleListWithHeader
                     title={"Categories"}
                     showScroll={false}
                     data={categories}
-                    CardType={SquareIconWithText}
+                    CardType={SquareImgWithText}
                     passItem={true}
                     onPress={setItemId}
                     CardParams={{
-                        indexCheck: indexCheck,
                         borderRadius: 10,
                         size: 30,
-                        indexTest: useState("0")
+                        // direction: "bottom"
                     }}
                 />
                 {/* Free Delivery -> Carousel with Business Cards */}
-                <HorizontalScorabbleList
+                <HorizontalScorabbleListWithHeaderAndCounter1
                     title={"Free Delivery Now"}
                     showScroll={false}
                     data={hotels}
@@ -157,11 +158,16 @@ export default function Homescreen({navigation}){
                     passItem={true}
                     CardParams={{
                         cardHeight: 55,
-                        indexTest: useState(false)
+                        // indexTest: useState(false)
+                    }}
+                    counterOptions={{
+                        text: "Options available until",
+                        size: 10,
+                        until: 3600
                     }}
                 />
                 {/* Free Delivery -> Carousel with Business Cards */}
-                <HorizontalScorabbleList
+                <HorizontalScorabbleListWithHeader
                     title={"Promotions available"}
                     showScroll={false}
                     data={hotels}
@@ -169,11 +175,11 @@ export default function Homescreen({navigation}){
                     passItem={true}
                     CardParams={{
                         cardHeight: 55,
-                        indexTest: useState(false)
+                        // indexTest: useState(false)
                     }}
                 />
                 {/* Free Delivery -> Carousel with Business Cards */}
-                <HorizontalScorabbleList
+                <HorizontalScorabbleListWithHeader
                     title={"Restaurants in your area"}
                     showScroll={false}
                     data={hotels}
@@ -181,7 +187,7 @@ export default function Homescreen({navigation}){
                     passItem={true}
                     CardParams={{
                         cardHeight: 55,
-                        indexTest: useState(false)
+                        // indexTest: useState(false)
                     }}
                 />
             </ScrollView>

@@ -11,7 +11,7 @@ export default function HomeHeader({
     const BadgeIcon = withBadge(10)(Icon)
 
     return (
-        <View style={{...styles.header, flexDirection: "row"}}>
+        <View style={{...styles.header, justifyContent: "space-between"}}>
             <View style={{
                     marginLeft: 15,
                     ...fullJustify

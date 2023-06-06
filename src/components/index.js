@@ -1,8 +1,6 @@
-import {CustomButton, InversibleButton} from "components/button";
 import { StyleSheet } from "react-native";
 import { COLORS, parameters } from "global";
-import { HeaderText } from "components/Text";
-import { SquareCards } from "./Cards";
+import { HeaderText } from "assets/custom_components/Text";
 
 const styles = StyleSheet.create({
     header: {
@@ -10,7 +8,7 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.primary,
         flexDirection: "row",
         height: parameters.headerHeight,
-        justifyContent: "space-between",
+
     },
     headerText:{
         color: COLORS.white,
@@ -20,4 +18,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export {styles, CustomButton, InversibleButton, HeaderText, SquareCards}
+export {styles, HeaderText}

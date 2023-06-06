@@ -14,7 +14,7 @@ import * as Animatable from "react-native-animatable";
 import { SocialIcon, Button} from "react-native-elements";
 import { Icon } from "@rneui/themed";
 import Swiper from "react-native-swiper";
-import {CustomButton} from "components";
+import {CustomButton} from "assets/custom_components";
 
 export default function SignInWelcomeScreen({
     navigation
