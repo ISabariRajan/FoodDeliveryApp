@@ -23,7 +23,7 @@ import { hotels } from "data/hotel_data";
 import {
     BussinessCard1, HorizontalScorabbleList,
     HorizontalScorabbleListWithHeader, HorizontalScorabbleListWithHeaderAndCounter1,
-    SquareImgWithText, setItemId, InversibleButton
+    SquareImgWithText, setItemId, InversibleButton, FloatingButton
 } from "assets/custom_components";
 import { Image } from "react-native-elements";
 // import { FlatList } from "react-native-gesture-handler";
@@ -44,7 +44,11 @@ export default function Homescreen({navigation}){
                 showsVerticalScrollIndicator= {false}
             >
                 {/* Select Button Delivery/ Pick-up */}
-                <View>
+                <View
+                    style={{
+                        backgroundColor: COLORS.white
+                    }}
+                >
                     <View style={{
                         flexDirection: "row",
                         ...fullJustify
@@ -190,7 +194,14 @@ export default function Homescreen({navigation}){
                         // indexTest: useState(false)
                     }}
                 />
+
+
             </ScrollView>
+            <FloatingButton
+                title={"Map"}
+                size={50}
+                icon_name={"map-marker"}
+            />
         </View>
    )
 }
