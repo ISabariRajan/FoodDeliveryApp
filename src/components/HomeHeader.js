@@ -7,6 +7,7 @@ import { Badge } from "react-native-elements";
 
 export default function HomeHeader({
     title,
+    navigation
 }){
     const BadgeIcon = withBadge(10)(Icon)
 

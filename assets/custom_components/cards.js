@@ -114,7 +114,12 @@ export const RatingBox = ({
 export const BussinessCard1 = ({
     params
 }) => {
-    // console.log("BusinessCard1: ", params, params.cardHeight)
+    /*
+        BusinessCard1 is one of different BusinessCaedDesign which has a Business image, Rating and types of items sold,
+        It has 2 params
+        params.item       -   The bussiness item which has details relatd to business, like Name, decsription, rating etc
+        params.cardHeight -   The user can set the height of the business card, to better fit the Data
+    */
     item = params.item
     width = ScreenWidth;
     size = width * .8;
@@ -193,6 +198,14 @@ export const BussinessCard1 = ({
 export const SquareImgWithText = ({
     params
 }) => {
+    /*
+        SquareImage with Text will have one SquareImage and one Text, You can set borderRadius, direction and size of the Image
+        It has 4 params
+        params.item         -   The item which image source and name
+        params.size         -   The size of SquareImage
+        params.direction    -   The Direction where the Text should be displayed "top, bottom, left or right"
+        params.borderRadius -   The BorderRadius of the outer Box
+    */
     size = params.size
     item = params.item
     indexCheck = params.indexCheck
@@ -205,19 +218,19 @@ export const SquareImgWithText = ({
     isInverse = (indexCheck === item.id);
 
     // These Checks are placing Text in specific Direction
-    textStyle = {
+    beforeTextStyle = afterTextStyle = {
         fontSize: size * 0.35,
         color: isInverse ? COLORS.white : COLORS.black,
         textTransform: "capitalize"
-    }
+    };
     if (direction == "left" || direction == "top"){
         beforeTextStyle = {
-            ...textStyle,
+            ...beforeTextStyle,
             display: "flex"
         }
     } else if (direction == "right" || direction == "bottom"){
         afterTextStyle = {
-            ...textStyle,
+            ...afterTextStyle,
             display: "flex"
         }
     }
@@ -236,7 +249,7 @@ export const SquareImgWithText = ({
             paddingVertical: size / 5
         }
     }
-    // indexTest = params.indexTest
+
     return (
         <View            
         style={{
@@ -389,7 +402,6 @@ export const HorizontalScorabbleList = ({
                     >
                         <CardType params={CardParams}/>
                     </TouchableOpacity>
-
                 )
             }}
         />
