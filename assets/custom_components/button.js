@@ -53,7 +53,7 @@ export const InversibleButton = ({
     );
 }
 
-export const FloatingButton = ({
+export const SquareFloatingButton = ({
     title,
     size,
     icon_name,

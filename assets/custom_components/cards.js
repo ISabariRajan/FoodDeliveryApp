@@ -21,7 +21,6 @@ export const setItemId = (
     setIndexCheck,
     CardParams
 ) => {
-    console.log(item, indexCheck)
     setIndexCheck(item.id)
     CardParams.indexCheck = item.id
     return CardParams
@@ -211,7 +210,7 @@ export const SquareImgWithText = ({
     indexCheck = params.indexCheck
     borderRadius = params.borderRadius
     direction = params.direction ?? "right"
-    console.log(direction)
+
     if(params.dirty === undefined){
         indexCheck = 0
     }
