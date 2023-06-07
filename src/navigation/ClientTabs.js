@@ -96,7 +96,13 @@ export default function RootClientTabs(){
                     }
                 }}
             />
-            
+            {/* <ClientTabs.Screen
+                name="RestaurantMapScreen"
+                component={RestaurantmapScreen}
+                options={{
+                    headerShown: false,
+                }}
+            /> */}
         </ClientTabs.Navigator>
     );
 };

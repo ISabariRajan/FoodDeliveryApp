@@ -23,7 +23,7 @@ import { hotels } from "data/hotel_data";
 import {
     BussinessCard1, HorizontalScorabbleList,
     HorizontalScorabbleListWithHeader, HorizontalScorabbleListWithHeaderAndCounter1,
-    SquareImgWithText, setItemId, InversibleButton, FloatingButton
+    SquareImgWithText, setItemId, InversibleButton, SquareFloatingButton
 } from "assets/custom_components";
 import { Image } from "react-native-elements";
 // import { FlatList } from "react-native-gesture-handler";
@@ -69,7 +69,8 @@ export default function Homescreen({navigation}){
                             titleStyle={{...small, color:COLORS.black}}
                             isInverse={!delivery}
                             onPress={()=>{
-                                setDelivery(false)
+                                setDelivery(false);
+                                navigation.navigate("RestaurantMapScreen");
                             }}
                             />
                     </View>
@@ -183,25 +184,33 @@ export default function Homescreen({navigation}){
                     }}
                 />
                 {/* Free Delivery -> Carousel with Business Cards */}
-                <HorizontalScorabbleListWithHeader
-                    title={"Restaurants in your area"}
-                    showScroll={false}
-                    data={hotels}
-                    CardType={BussinessCard1}
-                    passItem={true}
-                    CardParams={{
-                        cardHeight: 55,
-                        // indexTest: useState(false)
-                    }}
-                />
+                {delivery && // Show Restaurants in your area only if delivery is selected
+                    <HorizontalScorabbleListWithHeader
+                        title={"Restaurants in your area"}
+                        showScroll={false}
+                        data={hotels}
+                        CardType={BussinessCard1}
+                        passItem={true}
+                        CardParams={{
+                            cardHeight: 55,
+                            // indexTest: useState(false)
+                        }}
+                    />
+                }
 
 
             </ScrollView>
-            <FloatingButton
-                title={"Map"}
-                size={50}
-                icon_name={"map-marker"}
-            />
+            {delivery && // Show Floating Map Button Only when delivery is selected
+                <SquareFloatingButton
+                    title={"Map"}
+                    size={50}
+                    icon_name={"map-marker"}
+                    onPress={()=>{
+                        navigation.navigate("RestaurantMapScreen");
+                    }}
+                />
+
+            }
         </View>
    )
 }
