@@ -1,5 +1,4 @@
 import React from "react";
-import { withBadge } from "@rneui/themed";
 import { View, Text } from "react-native";
 import { styles } from "components";
 import { COLORS, fullJustify } from "global";
@@ -9,7 +8,7 @@ export default function HomeHeader({
     navigation
 }){
     title= "Ultimate Food"
-    const BadgeIcon = withBadge(10)(Icon)
+    // const BadgeIcon = withBadge(10)(Icon)
 
     return (
         <View style={{...styles.header, justifyContent: "space-between"}}>
@@ -31,7 +30,8 @@ export default function HomeHeader({
                     marginRight: 20,
                     ...fullJustify
                 }}>
-                <BadgeIcon
+                <MaterialCommunityIcon
+                    badgeData={1}
                     type="material-community"
                     name="cart"
                     color={COLORS.inverse}
