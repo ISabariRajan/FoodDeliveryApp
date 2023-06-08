@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Button, StyleSheet,TouchableOpacity } from "react-native";
 import {COLORS, parameters, title, customStyle} from "global";
-import { Icon } from "@rneui/themed";
+import { MaterialCommunityIcon } from "assets/custom_components/Icon";
 
 export const CustomButton = ({
     accessibilityState,
@@ -76,9 +76,8 @@ export const SquareFloatingButton = ({
             <TouchableOpacity
                 onPress={onPress}
             >
-                <Icon
+                <MaterialCommunityIcon
                     name={icon_name}
-                    type="material-community"
                     size={size/2.5}
                     color={COLORS.primary}
                 />

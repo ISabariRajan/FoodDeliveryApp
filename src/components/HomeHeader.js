@@ -1,10 +1,9 @@
 import React from "react";
-import { Icon, withBadge } from "@rneui/themed";
+import { withBadge } from "@rneui/themed";
 import { View, Text } from "react-native";
 import { styles } from "components";
 import { COLORS, fullJustify } from "global";
-import { Badge } from "react-native-elements";
-
+import {MaterialCommunityIcon} from "assets/custom_components/Icon";
 export default function HomeHeader({
     title,
     navigation
@@ -18,8 +17,7 @@ export default function HomeHeader({
                     marginLeft: 15,
                     ...fullJustify
                 }}>
-                <Icon
-                    type="material-community"
+                <MaterialCommunityIcon
                     name="menu"
                     color={COLORS.inverse}
                     size={32}

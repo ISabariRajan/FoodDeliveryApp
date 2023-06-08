@@ -3,18 +3,15 @@ import {
     View,
     Text,
     StyleSheet,
-    Dimension,
-    StatusBar,
     TextInput
 } from "react-native";
 import * as Animatable from "react-native-animatable";
 import Header from "components/Header";
-import {COLORS, parameters, title, customStyle} from "global/styles";
+import {COLORS, title, customStyle} from "global/styles";
 import {CustomButton} from "assets/custom_components";
-import {usercontroller} from "controllers";
-import { SocialIcon, Button } from "react-native-elements";
-import { Icon } from "@rneui/themed";
+import { SocialIcon } from "react-native-elements";
 
+import {MaterialCommunityIcon} from "assets/custom_components/Icon";
 
 
 export default function SignInScreen({
@@ -67,11 +64,10 @@ export default function SignInScreen({
                 </View>
                 <View style={{...styles.textInput,...styles.textInput2}}>
                     <Animatable.View>
-                        <Icon
-                            type="material-community"
+                        <MaterialCommunityIcon
                             name="lock"
                             iconStyle={{marginRight:0}}
-                            />
+                        />
                     </Animatable.View>
 
                     <TextInput
@@ -85,11 +81,10 @@ export default function SignInScreen({
 
                     <Animatable.View>
                     {/* animation={textInput2Focused?"":"fadeInLeft"}  duration={800} */}
-                        <Icon
-                            type="material-community"
+                        <MaterialCommunityIcon
                             name="eye-off"
                             iconStyle={{marginRight:10}}
-                            /> 
+                        />
                     </Animatable.View>
                 </View>
             </View>

@@ -2,8 +2,8 @@ import * as React from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Homescreen from "screens/HomeScreen";
 import RootClientTabs from "navigation/ClientTabs";
-import { Icon } from "@rneui/themed";
 import { COLORS } from "global";
+import { MaterialCommunityIcon } from "assets/custom_components/Icon";
 
 const Drawer1 = createDrawerNavigator();
 
@@ -38,9 +38,8 @@ export const DrawerIcon1 = ({
     params
 }) => {
     return (
-        <Icon
+        <MaterialCommunityIcon
             name={params.name}
-            type="material-community"
             size={params.size}
             color={params.focused ? COLORS.primary : COLORS.grey1}
         />

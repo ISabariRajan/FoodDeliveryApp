@@ -1,18 +1,13 @@
-import React, {useRef, useState} from "react";
+import React, {} from "react";
 
 import {
     View,
     Text,
     StyleSheet,
-    Dimension,
-    TextInput,
     Image
 } from "react-native";
 
-import { COLORS, parameters, title, customStyle, images } from "global";
-import * as Animatable from "react-native-animatable";
-import { SocialIcon, Button} from "react-native-elements";
-import { Icon } from "@rneui/themed";
+import { COLORS, customStyle, images } from "global";
 import Swiper from "react-native-swiper";
 import {CustomButton} from "assets/custom_components";
 

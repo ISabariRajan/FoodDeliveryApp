@@ -1,12 +1,12 @@
 import React from "react";
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Icon } from "@rneui/themed";
 import Homescreen from "screens/HomeScreen";
 import { COLORS } from "global";
 import SearchScreen from "screens/SearchScreen";
 import MyOrderScreen from "screens/MyOrderScreen";
 import MyAccountScreen from "screens/MyAccountScreen";
+import {MaterialCommunityIcon} from "assets/custom_components/Icon";
 
 
 const ClientTabs = createBottomTabNavigator();
@@ -32,9 +32,8 @@ export default function RootClientTabs(){
                     tabBarLabel: "Home",
                     tabBarIcon: ({color,size}) => {
                         return (
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="home"
-                                type="material-community"
                                 size={size}
                                 color={color}
                             />
@@ -50,9 +49,8 @@ export default function RootClientTabs(){
                     tabBarLabel: "Search",
                     tabBarIcon: ({color,size}) => {
                         return (
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="magnify"
-                                type="material-community"
                                 size={size}
                                 color={color}
                             />
@@ -68,9 +66,8 @@ export default function RootClientTabs(){
                     tabBarLabel: "My Orders",
                     tabBarIcon: ({color,size}) => {
                         return (
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="view-list"
-                                type="material-community"
                                 size={size}
                                 color={color}
                             />
@@ -86,9 +83,8 @@ export default function RootClientTabs(){
                     tabBarLabel: "Account",
                     tabBarIcon: ({color,size}) => {
                         return (
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="account"
-                                type="material-community"
                                 size={size}
                                 color={color}
                             />

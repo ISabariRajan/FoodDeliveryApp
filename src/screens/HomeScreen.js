@@ -17,7 +17,7 @@ import {
     Pressable
 } from "react-native";
 import HomeHeader from "components/HomeHeader";
-import { Icon } from "@rneui/themed";
+import {MaterialCommunityIcon} from "assets/custom_components/Icon";
 import { categories } from "data/food_categories";
 import { hotels } from "data/hotel_data";
 import {
@@ -98,9 +98,8 @@ export default function Homescreen({navigation}){
                         <View style={{
                             flex: 2
                         }}>
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="map-marker"
-                                type="material-community"
                                 size={26}
                             />
                         </View>
@@ -122,9 +121,8 @@ export default function Homescreen({navigation}){
                                 ...fullJustify
                             }}
                         >
-                            <Icon
+                            <MaterialCommunityIcon
                                 name="clock-time-four"
-                                type="material-community"
                             />
                             <Text>
                                 Now
@@ -134,10 +132,9 @@ export default function Homescreen({navigation}){
                     <View
                         style={{...fullJustify}}
                     >
-                        <Icon
-                            type="material-community"
-                            name="tune"
-                        />
+                        <MaterialCommunityIcon
+                                name="tune"
+                            />
                     </View>
                 </View>
                 {/* Categories -> Carousel with Mini Cards */}

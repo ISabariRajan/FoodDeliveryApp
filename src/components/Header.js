@@ -7,10 +7,9 @@ import {
     StatusBar
 } from "react-native";
 import {COLORS, parameters} from "global/styles"
-import { Icon } from "@rneui/themed";
 import { styles } from "components";
-// import { Icon } from "react-native-elements";
-// import Icon from "react-native-vector-icons/MaterialIcons";
+import {MaterialCommunityIcon} from "assets/custom_components/Icon";
+
 export default function Header({
     title,
     icon,
@@ -22,8 +21,7 @@ export default function Header({
             <View style={{
                 marginLeft: 20
             }}>
-                <Icon
-                    type="material-community"
+                <MaterialCommunityIcon
                     name={icon}
                     color={COLORS.inverse}
                     size={28}

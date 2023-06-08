@@ -10,10 +10,10 @@ import {
     Image
 } from "react-native";
 import {COLORS, parameters, title, customStyle, fullJustify} from "global";
-import { Icon } from "@rneui/themed";
 import { ScreenWidth } from "react-native-elements/dist/helpers";
 import { HeaderText } from "assets/custom_components/Text";
 import Countdown from 'react-native-countdown-component';
+import { MaterialCommunityIcon } from "assets/custom_components/Icon";
 
 export const setItemId = (
     item,
@@ -94,8 +94,7 @@ export const RatingBox = ({
     }
     return (
         <View style={{...style, paddingHorizontal: 6, paddingVertical:2, flexDirection:"row", alignItems: "center", height: scale * 2.5}}>
-            <Icon
-                type="material-community"
+            <MaterialCommunityIcon
                 name="star"
                 size={scale * 1.7}
                 iconStyle={{color: COLORS.inverse}}
