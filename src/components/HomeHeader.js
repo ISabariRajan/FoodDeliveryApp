@@ -8,7 +8,6 @@ export default function HomeHeader({
     navigation
 }){
     title= "Ultimate Food"
-    // const BadgeIcon = withBadge(10)(Icon)
 
     return (
         <View style={{...styles.header, justifyContent: "space-between"}}>
@@ -31,7 +30,7 @@ export default function HomeHeader({
                     ...fullJustify
                 }}>
                 <MaterialCommunityIcon
-                    badgeData={1}
+                    withBadge={1}
                     type="material-community"
                     name="cart"
                     color={COLORS.inverse}
