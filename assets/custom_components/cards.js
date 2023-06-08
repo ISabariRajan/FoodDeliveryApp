@@ -49,7 +49,7 @@ export const SquareImage = ({
                 borderRadius: border_radius,
                 height: inner_size,
                 width: inner_size,
-                backgroundColor: COLORS.white
+                backgroundColor: COLORS.inverse
 
             }}
         >
@@ -98,12 +98,12 @@ export const RatingBox = ({
                 type="material-community"
                 name="star"
                 size={scale * 1.7}
-                iconStyle={{color: COLORS.white}}
+                iconStyle={{color: COLORS.inverse}}
             />
             <Text style={{
                 paddingLeft: 3,
                 fontSize: scale*1.4,
-                color: COLORS.white,
+                color: COLORS.inverse,
                 fontWeight: "bold"
             }}>{rating}</Text>
         </View>
@@ -219,7 +219,7 @@ export const SquareImgWithText = ({
     // These Checks are placing Text in specific Direction
     beforeTextStyle = afterTextStyle = {
         fontSize: size * 0.35,
-        color: isInverse ? COLORS.white : COLORS.black,
+        color: isInverse ? COLORS.inverse : COLORS.black,
         textTransform: "capitalize"
     };
     if (direction == "left" || direction == "top"){
@@ -297,9 +297,9 @@ export const CounterWithText = ({
             timeLabels={{m: "Min", s: "Sec"}}
             digitStyle={{
                 backgroundColor: COLORS.primary,
-                color: COLORS.white
+                color: COLORS.inverse
             }}
-            digitTxtStyle={{color: COLORS.white}}
+            digitTxtStyle={{color: COLORS.inverse}}
         />
     </View>
     );

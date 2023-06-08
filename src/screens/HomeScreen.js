@@ -46,7 +46,7 @@ export default function Homescreen({navigation}){
                 {/* Select Button Delivery/ Pick-up */}
                 <View
                     style={{
-                        backgroundColor: COLORS.white
+                        backgroundColor: COLORS.inverse
                     }}
                 >
                     <View style={{
@@ -112,7 +112,7 @@ export default function Homescreen({navigation}){
                         <View 
                             style={{
                                 flexDirection: "row",
-                                backgroundColor: COLORS.white,
+                                backgroundColor: COLORS.inverse,
                                 paddingHorizontal: 10,
                                 paddingVertical: 1,
                                 marginVertical: 3,

@@ -25,7 +25,7 @@ export default function Header({
                 <Icon
                     type="material-community"
                     name={icon}
-                    color={COLORS.white}
+                    color={COLORS.inverse}
                     size={28}
                     onPress={()=>{navigation.goBack()}}
                 />

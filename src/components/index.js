@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 
     },
     headerText:{
-        color: COLORS.white,
+        color: COLORS.inverse,
         fontSize: 22,
         fontWeight: "bold",
         marginLeft: 30,

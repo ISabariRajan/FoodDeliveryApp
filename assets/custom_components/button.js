@@ -65,7 +65,7 @@ export const SquareFloatingButton = ({
                 position: "absolute",
                 bottom: 15,
                 right: 15,
-                backgroundColor: COLORS.white,
+                backgroundColor: COLORS.inverse,
                 width: size, height: size,
                 borderRadius: size/2,
                 elevation: 10,

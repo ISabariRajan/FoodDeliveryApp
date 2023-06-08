@@ -21,7 +21,7 @@ export default function HomeHeader({
                 <Icon
                     type="material-community"
                     name="menu"
-                    color={COLORS.white}
+                    color={COLORS.inverse}
                     size={32}
                     onPress={()=>{navigation.toggleDrawer()}}
                 />
@@ -36,7 +36,7 @@ export default function HomeHeader({
                 <BadgeIcon
                     type="material-community"
                     name="cart"
-                    color={COLORS.white}
+                    color={COLORS.inverse}
                     size={32}
                     onPress={()=>{navigation.goBack()}}
                     style={{justifyContent: "flex-end"}}

@@ -2,7 +2,7 @@ import React from "react";
 import {StyleSheet} from "react-native"
 export const COLORS = {
     primary: "#2196f3",
-    secondary: "#ffffff",
+    inverse: "#ffffff",
 
     buttons: "#ff8c52",
     grey1: "#43484d",
@@ -76,7 +76,7 @@ export const customStyle = StyleSheet.create({
    inverseButton: {
         ...fullJustify,
         ...buttonDimensions,
-        backgroundColor: COLORS.white,
+        backgroundColor: COLORS.inverse,
         borderColor: COLORS.primary,
         marginRight: 10
     },

@@ -76,7 +76,7 @@
                 <Text
                     style={{
                         fontSize: size * 0.35,
-                        color: isInverse ? COLORS.white : COLORS.black
+                        color: isInverse ? COLORS.inverse : COLORS.black
                     }}
                 >
                     {item.name}

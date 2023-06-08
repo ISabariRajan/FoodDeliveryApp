@@ -210,7 +210,7 @@ const styles = StyleSheet.create({
         // width:"100%",
     },
     button:{
-        color: COLORS.white,
+        color: COLORS.inverse,
         backgroundColor: COLORS.primary,
         width: "80%",
         borderRadius: 12
