@@ -108,7 +108,7 @@ export default function SignInScreen({
                 buttonStyle={customStyle.styledButton}
                 titleStyle={customStyle.buttonTitle}
                 onPress={()=>{
-                    navigation.navigate("RootClientTabs")
+                    navigation.navigate("DrawerNavigator")
                     // username_val = username.current.value;
                     // password_val = password.current.value;
                     // console.log(username_val, password_val)

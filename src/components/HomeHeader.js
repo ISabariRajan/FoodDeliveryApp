@@ -9,6 +9,7 @@ export default function HomeHeader({
     title,
     navigation
 }){
+    title= "Ultimate Food"
     const BadgeIcon = withBadge(10)(Icon)
 
     return (
@@ -22,7 +23,7 @@ export default function HomeHeader({
                     name="menu"
                     color={COLORS.white}
                     size={32}
-                    onPress={()=>{navigation.goBack()}}
+                    onPress={()=>{navigation.toggleDrawer()}}
                 />
             </View>
             <View style={{...fullJustify}}>
