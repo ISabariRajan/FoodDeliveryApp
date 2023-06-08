@@ -2,6 +2,17 @@ import React from "react";
 import { View, Text, Button, StyleSheet,TouchableOpacity } from "react-native";
 import {COLORS, parameters, title, customStyle} from "global";
 
+/**
+ * Exporting a functional component called `HeaderText` with a destructured prop `textVal`. The component returns a `View`
+ * with a `BoldText` component inside it, which displays the `textVal` prop passed to it.
+ * 
+ * @function
+ * @name HeaderText
+ * @kind variable
+ * @param {{ textVal: any }} { textVal }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const HeaderText = ({
     textVal
 }) => {
@@ -13,18 +24,36 @@ export const HeaderText = ({
                 paddingHorizontal: 10
             }}
         >
-            <Text
+            <BoldText
                 style={{
                     fontSize: 18,
-                    fontWeight: "bold",
                     paddingVertical: 2
                 }}
-            >{textVal}</Text>
+            
+            >
+                {textVal}
+            </BoldText>
         </View>
     )
 }
 
-export const CustomText = ({children, style, textType, ...rest}) => {
+
+/**
+ * Exporting a functional component called `CustomText` with destructured props `children`, `style`, `textType`, and any
+ * other props passed to it. The component returns a `Text` component with the `children` prop passed to it, and applies
+ * additional styles based on the `textType` prop passed to it. If `textType` is "bold", it applies a `fontWeight` of
+ * "bold" to the `style` prop. If `textType` is "inverse", it applies a `color` of `COLORS.inverse` to the `style` prop. If
+ * `textType` is "bold-inverse", it applies both the `fontWeight` of "bold" and the `color` of `COLORS.inverse` to the
+ * `style` prop.
+ * 
+ * @function
+ * @name CustomText
+ * @kind variable
+ * @param {{ [x: string]: any children: any style: any textType: any }} { children, style, textType, ...props }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
+export const CustomText = ({children, style, textType, ...props}) => {
     switch (textType){
         case "bold":
             style = {
@@ -46,28 +75,67 @@ export const CustomText = ({children, style, textType, ...rest}) => {
             }
             break;
     }
-    console.log(style)
+
     return (
-        <Text style={style} {...rest} >
+        <Text style={style} {...props} >
             {children}
         </Text>
     )
 }
 
-export const BoldText = ({children, style, ...rest}) => {
+/**
+ * Exporting a functional component called `BoldText` with destructured props `children`, `style`, and any other props
+ * passed to it. The component returns a `CustomText` component with the `children` and `style` props passed to it, and
+ * sets the `textType` prop to "bold". This will apply a `fontWeight` of "bold" to the `style` prop of the `CustomText`
+ * component.
+ * 
+ * @function
+ * @name BoldText
+ * @kind variable
+ * @param {{ [x: string]: any children: any style: any }} { children, style, ...props }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
+export const BoldText = ({children, style, ...props}) => {
     return (
-        <CustomText children={children} style={style} textType={"bold"} {...rest}/>
+        <CustomText children={children} style={style} textType={"bold"} {...props}/>
     )
 }
 
-export const InverseText = ({children, style, ...rest}) => {
+/**
+ * Exporting a functional component called `InverseText` with destructured props `children`, `style`, and any other props
+ * passed to it. The component returns a `CustomText` component with the `children` and `style` props passed to it, and
+ * sets the `textType` prop to "inverse". This will apply a `color` of `COLORS.inverse` to the `style` prop of the
+ * `CustomText` component.
+ * 
+ * @function
+ * @name InverseText
+ * @kind variable
+ * @param {{ [x: string]: any children: any style: any }} { children, style, ...props }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
+export const InverseText = ({children, style, ...props}) => {
     return (
-        <CustomText children={children} style={style} textType={"inverse"} {...rest}/>
+        <CustomText children={children} style={style} textType={"inverse"} {...props}/>
     )
 }
 
-export const BoldInverseText = ({children, style, ...rest}) => {
+/**
+ * Exporting a functional component called `BoldInverseText` with destructured props `children`, `style`, and any other
+ * props passed to it. The component returns a `CustomText` component with the `children` and `style` props passed to it,
+ * and sets the `textType` prop to "bold-inverse". This will apply both a `fontWeight` of "bold" and a `color` of
+ * `COLORS.inverse` to the `style` prop of the `CustomText` component.
+ * 
+ * @function
+ * @name BoldInverseText
+ * @kind variable
+ * @param {{ [x: string]: any children: any style: any }} { children, style, ...props }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
+export const BoldInverseText = ({children, style, ...props}) => {
     return (
-        <CustomText children={children} style={style} textType={"bold-inverse"} {...rest}/>
+        <CustomText children={children} style={style} textType={"bold-inverse"} {...props}/>
     )
 }

@@ -15,6 +15,20 @@ import { HeaderText } from "assets/custom_components/Text";
 import Countdown from 'react-native-countdown-component';
 import { MaterialCommunityIcon } from "assets/custom_components/Icon";
 
+/**
+ * The above code is starting the definition of a function called `setItemId` and it seems that the opening parentheses of
+ * the function's parameter list is missing.
+ * 
+ * @function
+ * @name setItemId
+ * @kind variable
+ * @param {any} item
+ * @param {any} indexCheck
+ * @param {any} setIndexCheck
+ * @param {any} CardParams
+ * @returns {any}
+ * @exports
+ */
 export const setItemId = (
     item,
     indexCheck,
@@ -26,18 +40,24 @@ export const setItemId = (
     return CardParams
 }
 
+/**
+ * The above code is starting the definition of a React component called `SquareImage`. The component takes in some props,
+ * which are not specified in the code snippet. The `export` keyword indicates that this component can be imported and used
+ * in other parts of the codebase. The `
+ * 
+ * @function
+ * @name SquareImage
+ * @kind variable
+ * @param {{ source: any size: any border_radius: any }} { source, size, border_radius }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const SquareImage = ({
     source,
     size,
     border_radius
 }) => {
-    /*
-        Square is a Card which has same size and an image inside it,
-        It has 3 params
-        source          -   The Image source, which has to be displayed
-        size            -   The size to be displayed
-        border_radius   -   The Square can be also be circle if we set right border radius
-    */
+
     outer_width = size * 2;
     if (border_radius === undefined)
         border_radius = size / 2;
@@ -65,16 +85,21 @@ export const SquareImage = ({
     );
 };
 
+/**
+ * The above code is defining a React component called "RatingBox" using ES6 syntax. The component takes in props as an
+ * argument and returns JSX code to render a rating box. However, the code is incomplete as there are three hash symbols (
+ * 
+ * @function
+ * @name RatingBox
+ * @kind variable
+ * @param {{ params: any }} { params }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const RatingBox = ({
     params
 }) => {
-    /*
-        RatingBox is a Card which has a star and a rating value,
-        It has 3 params
-        params.rating       -   The actual rating of a business or item
-        params.maxrating    -   The Out of rating eg 5/10 -> here 5 is rating and 10 is maxrating
-        params.scale        -   The Scale by which elements inside the box is populated
-    */
+
     rating = params.rating
     maxrating = params.maxrating
     rating_percent = ((rating/ maxrating) * 100)
@@ -109,15 +134,20 @@ export const RatingBox = ({
     )
 }
 
+/**
+ * The above code is exporting a component called "BussinessCard1" using ES6 syntax. However, the code is incomplete as
+ * there are three hash symbols after the opening curly brace, which suggests that there may be more code that follows.
+ * 
+ * @function
+ * @name BussinessCard1
+ * @kind variable
+ * @param {{ params: any }} { params }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const BussinessCard1 = ({
     params
 }) => {
-    /*
-        BusinessCard1 is one of different BusinessCaedDesign which has a Business image, Rating and types of items sold,
-        It has 2 params
-        params.item       -   The bussiness item which has details relatd to business, like Name, decsription, rating etc
-        params.cardHeight -   The user can set the height of the business card, to better fit the Data
-    */
     item = params.item
     width = ScreenWidth;
     size = width * .8;
@@ -193,6 +223,17 @@ export const BussinessCard1 = ({
     );
 }
 
+/**
+ * The above code is starting the definition of a React component called `SquareImgWithText`. The component takes in props
+ * and renders an image with text inside a square container. However, the code is incomplete as the `
+ * 
+ * @function
+ * @name SquareImgWithText
+ * @kind variable
+ * @param {{ params: any }} { params }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const SquareImgWithText = ({
     params
 }) => {
@@ -283,6 +324,17 @@ export const SquareImgWithText = ({
     )
 }
 
+/**
+ * The above code is defining a React component called "CounterWithText" using ES6 syntax for exporting. However, the code
+ * snippet is incomplete as it contains "
+ * 
+ * @function
+ * @name CounterWithText
+ * @kind variable
+ * @param {{ options: any }} { options }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const CounterWithText = ({
     options
 }) => {
@@ -304,6 +356,17 @@ export const CounterWithText = ({
     );
 }
 
+/**
+ * The above code is exporting a React component called "HorizontalScorabbleListWithHeaderAndCounter1". However, the code
+ * is incomplete as there are three hash symbols (
+ * 
+ * @function
+ * @name HorizontalScorabbleListWithHeaderAndCounter1
+ * @kind variable
+ * @param {{ title: any data: any showScroll: any CardType: any passItem: any CardParams: any onPress: any counterOptions: any }} { title, data, showScroll, CardType, passItem, CardParams, onPress, counterOptions }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const HorizontalScorabbleListWithHeaderAndCounter1 = ({
     title,
     data,
@@ -337,6 +400,17 @@ export const HorizontalScorabbleListWithHeaderAndCounter1 = ({
     );
 };
 
+/**
+ * The above code is exporting a React component called "HorizontalScorabbleListWithHeader". However, the code is
+ * incomplete as there are three hash symbols (
+ * 
+ * @function
+ * @name HorizontalScorabbleListWithHeader
+ * @kind variable
+ * @param {{ title: any data: any showScroll: any CardType: any passItem: any CardParams: any onPress: any }} { title, data, showScroll, CardType, passItem, CardParams, onPress, }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const HorizontalScorabbleListWithHeader = ({
     title,
     data,
@@ -366,6 +440,17 @@ export const HorizontalScorabbleListWithHeader = ({
     );
 }
 
+/**
+ * The above code is starting the definition of a React component called "HorizontalScorabbleList" using ES6 syntax for
+ * exporting a module. However, the code is incomplete as there are three hash symbols (
+ * 
+ * @function
+ * @name HorizontalScorabbleList
+ * @kind variable
+ * @param {{ data: any showScroll: any CardType: any passItem: any CardParams: any onPress: any }} { data, showScroll, CardType, passItem, CardParams, onPress, }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const HorizontalScorabbleList = ({
     data,
     showScroll,

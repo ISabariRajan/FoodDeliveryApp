@@ -34,6 +34,17 @@ const Drawer1 = createDrawerNavigator();
 //     );
 // }
 
+/**
+ * Exporting a functional component named `DrawerIcon1` that takes in an object with a `params` property as its only
+ * argument. The component returns a `MaterialCommunityIcon` component with props passed from the `params` object.
+ * 
+ * @function
+ * @name DrawerIcon1
+ * @kind variable
+ * @param {{ params: any }} { params }
+ * @returns {React.JSX.Element}
+ * @exports
+ */
 export const DrawerIcon1 = ({
     params
 }) => {
